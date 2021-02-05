@@ -40,3 +40,7 @@ if(date instanceof Date) true;
 
 //Operator trójargumentówy
 var data = (5 > 8) ? 5 : 8; //True = 5  ,false = 8
+
+//Niejawna konwersja
+if("1" + 0 == "10") true // wykona się  niejawnie skonwertowały się na stringi
+if(1 + "0" === "10") true // wykona się 

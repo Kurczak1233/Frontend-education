@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p::first-letter{
+            font-size: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            color: blue;
+        }
+        p::first-line{
+            background-color: lightpink;
+        }
+        ::selection{
+            background-color:lightseagreen
+        }
+        ol{
+            list-style-type: none;
+        }
+        li::before
+        {
+            content:"►"
+        }
+        li::after
+        {
+            content:"!";
+            color: red;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, iste officiis. Architecto quisquam consectetur doloribus iste vel quam quis, distinctio maiores optio molestiae natus sequi eligendi ipsa cupiditate aliquid enim officia explicabo, cumque libero consequuntur repellat! Eum nostrum nihil deserunt sunt temporibus dolorem voluptas? Sint veritatis maxime quasi temporibus non!</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet.</p>
+    <ol>
+        <li>Raz</li>
+        <li>Dwa</li>
+        <li>Trzy</li>
+    </ol>
+</body>
+</html>

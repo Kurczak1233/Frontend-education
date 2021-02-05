@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <fieldset>
+        <legend>Logowanie</legend>  
+        <p>
+            <label for="username">Nazwa Użytkownika</label>
+            <input type="text" name="user_name" id="username" required>
+        </p>
+        <p>
+            <label for="username">Hasło użytkownika</label>
+            <input type="password" name="user_password" id="userpassword" required>
+        </p>
+        <button type="submit">Wyślij</button>
+        <button type="reset">Reset</button>
+</fieldset>
+
+    </form> 
+    <form action="" method="POST" enctype="multipart/form-data">
+        <fieldset>
+        <legend>Rejestracja</legend>  
+        <p>
+            <label for="username">Nazwa Użytkownika</label>
+            <input type="text" name="user_name" id="username" required>
+        </p>
+        <p>
+            <label for="username">Hasło użytkownika</label>
+            <input type="password" name="user_password" id="userpassword" required>
+        </p>
+        <p>
+            <label for="username">Powtórzone hasło użytkownika</label>
+            <input type="password" name="user_password" id="userpassword" required>
+        </p>
+        <p>
+            <label for="email">E-mail</label>
+            <input type="email" name="userEmail" id=email>
+        </p>
+        <p>
+            <label for="userTel">Telefon</label>
+            <input type="tel" name="userTel" id=phone>
+        </p>
+        <textarea name="description" id="userDescription" cols="30" rows="5">Opisz w kilku słowach siebie...</textarea>
+        <br>
+        <label for="userImage">Wybierz avatar</label>
+        <input type="file" name="userImage" id="userImage" accept="image/jpeg, image/png, description/pdf, description/html">
+        <p>
+            Płeć:
+            <input type="radio" id="sexM" name="userSex" value="Male">
+            <label for="sexM">Mężczyzna</label>
+            <input type="radio" id="sexF" name="userSex" value="Female">
+            <label for="sexF">Kobieta</label>
+        </p>
+        <p>
+            <label for="ageRange">WiekNaSuwaku:</label>
+            <input type="range" id="ageRange" name="age" min="14" max="140" step="1">
+        </p>
+        <p>
+            <label for="age">Wiek</label>
+            <input type="number" id="age" name="age" min="14" max="140">
+        </p>
+        <label for="theme">Motyw</label>
+        <select type="theme" name="theme" id="theme">
+            <optgroup label="Opcje:">       
+                <option value="Jasny">Jasny</option>
+                <option value="Ciemny">Ciemny</option>
+            </optgroup>    
+        </select>
+        <p>   
+            <button type="submit">Wyślij</button>
+            <button type="reset">Reset</button>
+        </p>
+</fieldset>
+
+    </form>       
+
+</body>
+</html>

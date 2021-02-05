@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Data/Styles.css" type="text/css"> <!--Uwzględnienie pliku stylów CSS-->
+    <link rel="icon" href="ZuyKot.jpg" type="image/jpg"> <!--Ikona strony na pasku!-->
+</head>
+<body>
+    <h1>Media</h1>
+    <figure>
+    <img src="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg" width="100"></a>
+    <figcaption>Niefścieknięty Kotek</figcaption>
+    </figure>
+
+    <figure>
+    <img src="ZuyKot.jpg" alt="Obraz wściekniętego kota" title="Wścieknięty Koteczek" width="100"> <!--Alt wyszkuiwany jest przez przeglądarkę!-->
+    <figcaption>Fścieknięty Kotek</figcaption>
+    </figure>
+
+    <picture> <!--Responsywność-->
+        <source media="(min-width:600px)" srcset="https://cdn.pixabay.com/photo/2014/11/30/14/11/cat-551554_960_720.jpg">
+            <img src="ZuyKot.jpg" alt="Obraz wściekniętego kota" title="Wścieknięty Koteczek">
+    </picture>
+
+    <video type="wideo/mp4" style="width:500px" controls src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"></video> <!--Licencje uważać-->
+</body>
+</html>

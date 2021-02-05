@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{font-size: 16px;} /*Wartość 16 px jest wartością domyślną i nie trzeba jej deklarować. Tutaj jest zademonstrowana jak to niejawnie wygląda a jawnie zostało zadeklarowane*/
+    article{font-size: 2em;} /*Trzeba jednak pamiętać o tym, że wartość ta może być dziedziczona!!!*/
+    h1{font-size: 1.25em;}
+    p{font-size: 1em;}
+    .box{border-radius: 1em;
+    background-color: rgb(255,0,25);
+    padding:1em;
+    margin:0.2em;
+    }
+    .medium-box
+    {
+        font-size: 15px;
+    }
+    .small-box
+    {
+        font-size: 10px;
+    }
+    ul{font-size: 1.5rem;}
+</style>
+<body>
+    <article>
+        <head>
+            <h1>Nagłówek</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </head>
+        <div class="box small-box">Lorem ipsum dolor sit amet.</div>
+        <div class="box medium-box">Lorem ipsum dolor sit amet.</div>
+    </article>
+    <ul>
+        <li>Text
+            <ul>
+                <li>Text
+                    <ul>
+                        <li>Text</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>

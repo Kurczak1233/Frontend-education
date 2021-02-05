@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body article h1.heading {color: silver;}
+        h1 {color:brown;}
+        #headingelement{color: gold;}
+        article #headingelement{color: goldenrod;}
+        body article h1{color:brown;}
+        h1[class] {color:silver;}
+        h1.heading {color: silver}
+        /*Musimy pamiętać, że specyficzność jest determinującym warunkiem stylów. Największą moc mają style inline, jednak nie jest to zalecany styl programownia*/
+    </style>
+</head>
+<body>
+        <article>
+            <h1 id="headingelement" class="heading">Nagłowek</h1>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <section>
+                <article><p>Lorem ipsum dolor sit amet.</p></article>
+            </section>
+        </article>
+</body>
+</html>

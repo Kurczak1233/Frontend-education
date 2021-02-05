@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [data-color]
+        {
+            background-color: aqua;
+            border: solid red;
+            font-weight: bold;
+        }
+        [data-color="blue"]
+        {
+            background-color: royalblue;
+            border: blanchedalmond;
+            padding:20px
+        }
+        [data-green="dark" i]
+        {
+            background-color: cadetblue;
+        }
+        [data-green="light" i]
+        {
+            background-color: chartreuse;
+        }
+        [class*="by"]
+        {
+            background-color: coral;
+        }
+        [class~="small-text"]
+        {
+            font-size: 5px;
+        }
+        [class^="blue"]
+        {
+            font-size: 25px;
+        }
+        [class$="bylo"]
+        {
+            font-size: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div data-color>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odit?</div>
+    <div class="small-text bight-color">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odit?</div>
+    <div class="coś tam byle by bylo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odit?</div>
+    <div data-green="Dark">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odit?</div>
+    <div data-green="ligHt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odit?</div>
+    <div data-color="blue">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, odit?</div>
+</body>
+</html>

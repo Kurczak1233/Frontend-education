@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+function CarFactory1()
+{
+    this.numProducedCars = 0,
+    this.carsArr = [];
+    this.MakeCar() = function(brand, model, year)
+    {
+        this.brand = brand;
+        this.model = model;
+        this.year = year;
+        this.numProducedCars++;
+        this.carsArr.push();
+    }
+    this.PrintStats = function()
+    {
+        console.log("Ilośc wyprodukowanych aut tą metodą wynosi " + this.numProducedCars);
+    }
+}
+
+var Fabryka = new CarFactory1();
+Fabryka.MakeCar("Dodge", "Srajper", 1555);
+Fabryka.printStats();
+Fabryka.numProducedCars;
+Fabryka.carsARr
+
+// Notacja literałowa (obiekt możemy wykorzystać dopiero po zadeklarowaniu/zainicjalizowaniu jak w tym wypadku)
+  var CarFactory = {
+    numProducedCars: 0,
+    carsArr: [],
+    makeCar: function(brand, model, year)
+      {
+        var car = {
+        brand: brand,
+        model: model,
+        year: year
+};
+this.numProducedCars++;
+this.carsArr.push(car);
+return car;
+      },
+printStats: function()
+{
+console.log("Ilość wyprodukowanych aut " + this.numProducedCars);
+}
+
+};
+
+/// KOSZYK 
+
+let ShoppingCart = {
+    items: [],
+    add: function(name, price){
+        this.items.push({
+        name: name,
+        price: price
+});
+    },
+removeByIndex: function(id)
+    {
+        if(id >= this.items.length) return; //Dozwolone wyjście w taki sposób
+        this.items.splice(id, 1);
+    },
+printInfo: function()
+{
+    let finalPrice = 0;
+    for(let i = 0; i < this.items.length; i++)
+    {
+        let element = this.items[i];
+        finalPrice += element.price;
+console.log("W koszyku " + element.name + ", cena: " + element.price);    
+} 
+console.log("Wartość koszyka: " + finalPrice);
+}
+};
+
+
+ShoppingCart.add("TV" ,1000);
+ShoppingCart.add("PS4", 500);
+
+
+    </script>
+</body>
+</html>

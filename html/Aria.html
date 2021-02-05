@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="telefon">Numer telefonu</label>
+    <input type="text" name="telefon" id="telefon" aria-required="true" aria-describedby="tel_info">
+    <p id="tel_info">Numer telefonu nie może zawierać spacji i myślników</p>
+    <!--Atrybut aria-required z wartością ustawioną na true informuje aplikacje asystujące, że pole jest wymagane.
+Kolejny atrybut aria-describedby informuje aplikacje asystujące,
+że pole tekstowe jest dodatkowo opisane przez element o identyfikatorze tel_info.
+Efekt będzie taki, że nawigując programem czytającym oprócz etykiety „Numer telefonu”
+program odczyta również dołączoną informację
+„Numer telefonu nie może zawierać spacji i myślników” oraz, że jest to pole wymagane.-->
+</body>
+</html>

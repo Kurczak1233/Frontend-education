@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .capitalize{ text-transform: capitalize; }
+        .uppercase{text-transform: uppercase;}
+        .lowercase{text-transform: lowercase;}
+        .underline{text-decoration: underline;}
+        .overline{text-decoration: overline; text-decoration-style: dotted; text-decoration-color:blue}
+        .line-through{text-decoration: line-through;}
+        .text-align-right{text-align: right;}
+        .text-align-left{text-align: left;}
+        .text-align-justify{text-align:justify;}
+        .text-align-center{text-align: center;}
+        .line-height-big{line-height: 2em;}
+        .line-height-small{line-height: 0.3em;}
+        .sup{vertical-align: super;}
+        .sub{vertical-align: sub;}
+        .text-indent-big{text-indent: 20px;}
+        .word-spacing-32px{word-spacing: 2em;}
+        .letter-spacing{letter-spacing: 1.25em;}
+        .shadow1{text-shadow: 2px 2px 4px cornflowerblue;}
+    </style>
+</head>
+<body>
+    <p class="uppercase">Lorem ipsum dolor sit amet.</p>
+    <p class="lowercase">Lorem ipsum dolor sit amet.</p>
+    <p class="capitalize shadow1">Lorem ipsum dolor sit amet.</p>
+    <p class="underline letter-spacing">Lorem ipsum dolor sit amet.</p>
+    <p class="overline word-spacing">Lorem ipsum dolor sit amet.</p>
+    <p class="line-through">Lorem ipsum dolor sit amet.</p>
+    <p class="line-height-big">Lorem ipsum dolor sit amet.</p>
+    <p class="underline text-indent-big">Lorem <sub>ipsum</sub> <sup>dolor</sup> sit amet.</p>
+    <p>Lorem <span class="sup">ipsum dolor</span> sit amet.</p>
+    <p>Lorem ipsum <span class="sub">dolor</span> sit amet.</p>
+</body>
+</html>

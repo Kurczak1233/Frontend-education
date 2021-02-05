@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+<style>
+        [class *= col]
+        {
+            background-color: aquamarine;
+            text-align: center;
+            border: 1px solid blue;
+        }
+</style>
+</head>
+<body>
+    <div class="container mt-2">
+        <!-- Html -->
+        <h1>h1</h1>
+        <h2>h2</h2>
+        <h3>h3</h3>
+        <h4>h4</h4>
+        <h5>h5</h5>
+        <h6>h6</h6>
+        <!-- Bootstrap -->
+        <p class="h1">p.h1</p>
+        <p class="h2">p.h2</p>
+        <p class="h3">p.h3</p>
+        <p class="h4">p.h4</p>
+        <p class="h5">p.h5</p>
+        <p class="h6">p.h6</p>
+        <div class="display-1">display-1</div>
+        <div class="display-2">display-2</div>
+        <div class="display-3">display-3</div>
+        <div class="display-4">display-4</div>
+        <div class="display-5">display-5</div>
+        <div class="display-6">display-6</div>
+
+        <p class="lead-mt-5">Wyróżniony paragraf</p>
+        <p>Zwykły paragraf</p>
+
+        <!-- <p class="text-left">text-left</p>
+        <p class="text-right">text-right</p> NIE DZIAŁAJĄ? --> 
+        <p class="text-center">text-center</p>
+
+        <!-- <p class="text-left text-md-center">text-left</p>
+        <p class="text-right text-md-center">text-right</p> -->
+        <p class="text-center text-md-center">text-center</p>
+
+        <div class="text-nowrap mt-2 border border-dark" style="width:10rem"> <!--nowrap sprawia, że tekst się nie zwija-->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, nesciunt.
+        </div>
+        <div class="badge text-wrap mt-5 bg-secondary" style="width:5rem;">Lorem ipsum dolor sit amet.</div> <!--Badge musi mieć text-wrap!-->
+    
+        <p class="text-lowercase">coś DUŻYMI liteartmi</p>
+        <p class="text-uppercase">Coś Z DUżymi LiteramI</p>
+        <p class="text-capitalize">coś z malymi literami początkowymi</p>
+        
+        <p class="text-break">dłuuuuuuuuuuuuuuuuuuuuuuui\uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuugie słowo</p>
+
+
+        <div class="container">
+            <!-- <p class="font-weight-bold">Bold text.</p>
+              <p class="font-weight-bolder">bolder</p>
+              <p class="font-weight-light">light</p>
+              <p class="font-weight-lighter">lighter</p>
+              <p class="font-italic">italic</p>
+              <p class="font-normal">normal</p> BUGI! Niestety...-->
+      <div>
+
+
+    </div>
+    <div class="container">
+        <figure>
+            <blockquote>
+                <cite>Gdyby kózka nie skakała...</cite>
+            </blockquote>
+            <figcaption class="blockquote-footer">Pewna sławna <cite title="Tytuł źródła">osoba</cite></figcaption>
+        </figure>
+    </div>
+
+    <p class="lh-1">Lorem ipsum dolor sit amet.</p>
+    <p class="lh-sm">Lorem ipsum dolor sit amet.</p>
+    <p class="lh-base">Lorem ipsum dolor sit amet.</p>
+    <p class="lh-lg">Lorem ipsum dolor sit amet.</p>
+
+    <p class="text-decoration-underline">Lorem, ipsum.</p>
+    <p class="text-decoration-line-through">Lorem, ipsum.</p>
+    <p class="text-decoration-none">Lorem, ipsum. Brak deko</p>
+
+    <p class="text-primary">text-primary</p>
+    <p class="text-secondary">text-secondary</p>
+    <p class="text-success">text-success</p>
+    <p class="text-danger">text-danger</p>
+    <p class="text-warning">text-warning</p>
+    <p class="text-info">text-info</p>
+
+    <p class="text-danger">
+        <a href="#" class="text-reset">Jakiś link</a>
+    </p>
+
+    <ul class="list-inline text-center mt-4">
+        <li class="list-inline-item">Element 1</li>
+        <li class="list-inline-item">Element 2</li>
+        <li class="list-inline-item">Element 3</li>
+    </ul>
+
+    <ul class="list-unstyled">
+        <li>Element 1</li>
+        <li>Element 2</li>
+        <ul>
+            <li>El Doda</li>
+            <li>El Doda</li>
+        </ul>
+        <li>Element 3</li>
+    </ul>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+</body>
+</html>

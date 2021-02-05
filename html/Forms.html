@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post"> <!--Action to adres pliku na który mają zostać przesłane nasze dane a method metoda (get wyświetla w URL/post niejawnie przesyła)-->
+        <label for="input_name">Nazwa użytkownika</label><br> <!--for odpowiada za ID, jest to specjalne oznaczenie ID dla znacznika label-->
+        <input name="user_name" id="input_name" type="text" minlength="3" maxlength="18" required placeholder="Username"><!--Id odnosi się do id labela, type jest nieobowiązkowy, warunki min i max, required - obowiązkowy-->
+    </form>
+    <br>
+    <form action="" method="get"><!--Get umożliwia podejrzenie wartości w linku URL-->
+        Username:<input name="username" type="text" required><br>
+        Zipcode:<input name="zipcode" type="text" required>
+        <button type="submit">Save</button>
+    </form><br>
+    <form action="" method="post" enctype="multipart/form-data">
+    <label for="input_username" type="text">Zdjęcie:</label><br>
+    <input name="username" id="input_username" type="text">
+    Wybierz plik: <input name="avatarfile" type="file" accept="image/png, image/jpeg, application/pdf, text/html, application/json">
+    <button type="submit">Zapisz</button>
+    </form>
+    <br><br>
+    <form action="" method="post">  <!--Check meila, password(wygwiazdkować), wieku i bio.-->
+        <input name="email" type="email" placeholder="Wpisz email" required>
+        <input name="password" type="password" placeholder="Wpisz hasło" required>
+        <input name="age" type="number" min=18 max=110 required>
+        <p><textarea name="bio"></textarea></p>
+        <button type="submit">Zarejestruj się</button>
+        <button type="reset">Reset</button>
+    </form>
+    <form action="" method="post"> <!--Radio - do wyboru opcje z wysłaniem-->
+        <input type="radio" name="color" value="red" id="redColor">
+        <label for="redColor">Czerwony</label>
+        <input type="radio" name="color" value="green" id="greenColor">
+        <label for="greenColor">Niebieski</label>
+        <input type="radio" name="color" value="blue" id="blueColor">
+        <label for="blueColor">Zielony</label>
+        <input type="submit" value="Wyślij"> <!--Inna nazwa do buttona? Inaczej zadeklarowany button?-->
+
+
+    </form>
+    <form action="" method="post"> <!--Radio - do wyboru opcje z wysłaniem-->
+        <input type="checkbox" name="color" value="czerwony" id="redColor">
+        <label for="redColor">Czerwony</label>
+        <input type="checkbox" name="color" value="czerwony" id="greenColor">
+        <label for="greenColor">Niebieski</label>
+        <input type="checkbox" name="color" value="czerwony" id="blueColor">
+        <label for="blueColor">Zielony</label>
+        <input type="submit" value="Wyślij"> <!--Inna nazwa do buttona? Inaczej zadeklarowany button?-->
+    </form>
+    <form action="" method="post"><!--Data wybór i wysyłanie-->
+        <input type="date" name="date">
+        <input name="datatime" type="datetime-local">
+        <button type="submit">Wyślij</button>
+    </form>
+    <form action="" method="post"><!--Wybór koloru-->
+        <input type="color" name="color" value="#000000">
+        <input type="submit" value="Wyślij">
+    </form>
+    <form action="" method="post">
+        <input type="range" min="1" max="100" value="50" step="1">
+        <input type="tel" placeholder="Numer telefonu" name="telephone">
+        <!--<p><input type="url" name="url" placeholder="Srona www" pattern="https://.*"></p>--> <!--Nie działa, ale dodatkowa walidacja danych dzięki pattern!-->
+        <input type="submit" value="Wyślij">
+    </form>
+    <select name="MenuDecyzji" id="menu">
+        <optgroup label="MostImportant">
+            <option value="First">First</option>
+            <option value="Second">Second</option>
+        </optgroup>
+        <optgroup label="MniejWażne">
+            <option value="Third">Third</option>
+            <option value="Fourth">Fourht</option>
+        </optgroup>
+    </select>
+        <form action="" method="post">
+            <Fieldset>
+                <Legend>Dane osobowe</Legend>
+                <label for="userInput">Imię</label>
+                <input type="text" id="userInput" name="username">
+            </Fieldset>
+            <Fieldset>
+                <Legend>Dalsze dane</Legend>
+                <label for="userInput2">Ulica</label>
+                <input type="text" id="userInput2" name="street">
+                <label for="userInput3">Miasto</label>
+                <input type="text" id="userInput3" name="miasto">
+            </Fieldset>
+        </form>
+    </select>
+</body>
+</html>

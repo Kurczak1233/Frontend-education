@@ -62,3 +62,51 @@ car1.printInfo(); //Audi A4 2007
 var x = Object.create({a:5,b:1}); //proptytp
 x.a // 5
 x.b // 1
+//Sprawdzanie czy właściwość istnieje w danym obiekice
+if("year" in b); true //do sth (TRUE!);
+if(b.hasOwnProperty("year")); true //do sth (TRUE!)
+
+//przegląd obiektów
+
+for(prop in b)
+{
+    console.log(prop + ":" + b.prop); //Przejrzenie to co ma w środku b + prototypy! 
+}
+for(prop in b)
+{
+    if(b.hasOwnProperty(prop)) console.log(prop + ":" + b.prop); //Przejrzenie to co ma w środku b BEZ PROTOTYPÓW!! 
+}
+
+//Kopiowanie obiektów
+//Płytkie
+var object = {a:5, b:1};
+var clone = object;
+clone === object //true
+clone.b = 3; 
+clone === object; //True bo pracujemy na tym  samym obiekcie i będą wyglądać tak samo (referencja!)
+
+//Głebokie
+var object2 = {a:5, b: {c:5,d:2},c: "txt"}
+var copy = JSON.stringify(source);
+copy;// "a:5, b: {c:5,d:2},c: "txt"" Tutaj wszystko jako string
+//A tutaj jako klon obiektu
+copy = JSON.parse(JSON.stringify(object2));
+
+//GETTERY I SETTERY
+var person = {
+    firstname: null,
+    lastname: null,
+    get fullname ()
+    {
+        return this.firstname + " " + this.lastname;
+    },
+    set fullname (newName)
+    {
+        var splited = newName.split(" ");
+        this.firstname = splited[0];
+        this.secondname = splited[1];
+    }
+}
+person.fullname = "Ola Kowalska";
+person.firstname; //Ola
+person.secondname; //Kowalska

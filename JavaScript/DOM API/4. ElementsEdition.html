@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.getElementById("paragraf").textContent
+        //Returns: Paragrapf
+        document.getElementById("paragraf").innerHTML = "<b>Nowa Treść</b>";
+        //Returns as HTML signs "<b>Nowa Treść</b>"
+        let p1 = document.getElementById("paragraf")
+        p1.appendChild(document.createElement("div"));
+        //Dodanie nowego elementu "div" do paragrafu
+        let newDiv = document.querySelector("p > div"); //queryselektor lepszy
+        newDiv.id = "newDiv";
+        newDiv.innerHTML = "tekst"; //Nadanie tekstu do nowego diva.
+        newDiv.appendChild(document.createTextNode("tekst"));//To samo co wyżej
+        p1.removeChild(newDiv); //Usunięcie tego diva
+        //Klonowanie nowego elementu i załączanie go:
+        let p2 = p1.cloneNode(true); //Sklonowanie
+        p2.id = "paragraf 2";
+        document.getElementsByTagName("body")[0].appendChild(p2); //Załączenie w odp miejscu
+        document.getElementsByTagName("body")[0].appendChild(p2);
+        //Zbieranie atrybutu elementu, modyfikacja i usuwanie.
+        document.getElementsByTagName("input")[0].getAttribute("type");
+        document.getElementsByTagName("input")[0].setAttribute("type", "textarea");
+        document.getElementsByTagName("input")[0].removeAttribute("type");
+        //Zbieranie listy klas i dodanie jednej oraz usunięcie
+        document.getElementsByTagName("div")[0].classList;
+        document.getElementsByTagName("div")[0].classList.add("rect");
+        document.getElementsByTagName("div")[0].classList.remove("box");
+        //Dodawanie stylu inline
+        document.getElementsByTagName("div")[0].setAttribute("style", "background: green;")
+    </script>
+</head>
+<body>
+    <h1>Heading</h1>
+    <a href="#">Link tekst</a>
+    <p id="paragraf">paragraf</p>
+    <div class="box md-width">Some text 1</div>
+    <div class="box">Some text 2</div>
+    <form action="">
+        <input type="text" name="email">
+    </form>
+</body>
+</html>

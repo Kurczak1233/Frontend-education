@@ -6,7 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        //NIEZALECANE (tworzenie nowej tablicy)
         let divCollection = document.getElementsByTagName("div");
+        Array.form(divCollection).forEach(element => {console.log(element);})
+        //Prostyszy sposób na przeiterowanie się po kolekcji.
+        let divarr = document.getElementsByTagName("div");
+        for(let el of divarr)
+        {
+         console.log(el);
+        }
+        //RESULT: 
+        // <div class=​"box">​Some text 1​</div>​
+        // <div class="box">Some text 2</div>
+        //Trzeci sposób za pomocą query selektora i foreach:
+        let divList = document.querySelectorAll("div");
+        divList.forEach(el => console.log(el));
+        //RESULT: 
+        // <div class=​"box">​Some text 1​</div>​
+        // <div class="box">Some text 2</div>
         
     </script>
 </head>

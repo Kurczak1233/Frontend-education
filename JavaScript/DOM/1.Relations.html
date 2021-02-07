@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        document.getElementsByTagName("div"); //Dobranie się do elementu
+            //Returns: HTMLCollection [div] //Kolekcja divów
+        document.getElementsByTagName("div")[0]; //Uzyskanie dostępu do elementu
+        //Returns: <div>​</div>​
+        document.getElementsByTagName("div").item(0); //2 sposób
+        //Returns: <div>​</div>​
+        document.getElementsByTagName("div").item(0).parentNode;
+        //Returns: <body></body>
+        document.getElementsByTagName("div").item(0).parentNode.style.background = "orange";
+        //Returns: all body backround is set as orange
+        document.getElementsByTagName("body").item(0).firstElementChild
+        //Returns <h1>Heading</h1>
+        //document.getElementsByTagName("body").item(0).firstChild
+        //Returns error albo białe znaki! 
+        document.getElementsByTagName("body").item(0).previousSibling
+        //Returns: <head></head>
+        
+        //Rodzice : parentNode, childNodes, parentElementNode
+        //Dzieci : firstElementChild , lastElementChild
+        //Rodzeństwo : previousElementSibling, nextElementSibling​
+        //Bardzo ważne jest dodawanie do wszystkiego ELEMENT!
+        //Ponieważ często łapiemy się na białe znaki!
+
+    </script>
+</head>
+<body>
+    <h1>Heading</h1>
+    <a href="#">Link tekst</a>
+    <p>paragraf</p>
+    <div></div>
+</body>
+</html>

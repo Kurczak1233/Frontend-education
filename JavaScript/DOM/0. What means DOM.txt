@@ -1,0 +1,2 @@
+The HTML DOM is an API (Programming Interface) for JavaScript
+DOCUMENT OBJECT MODEL.

@@ -6,7 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    <script>
+         document.getElementById("paragraf").style.background = "red";
+         //Returns: background of that table "red"
+         document.getElementsByTagName("div").item(0).style.background = "orange";
+        //Returns: background of first div is orange
+        document.querySelectorAll("body > div");
+        //Returns all divs in body
+        let divel = document.querySelectorAll("body > div");
+        for(let item of divel)
+        {
+            item.style.background = "yellow";
+        }
+        //Returns all seleted divs background "yellow"
+        document.querySelector("body > div");
+        //Returns FIRST div in body
+        document.getElementsByName("email");
+        //Returns NodeList [input]
+        document.getElementsByName("email")[0].style.background = "red"
+        //Returns background "red"
+        let divele = document.getElementsByClassName("box")
+        //Przypisujemy do divele tablice tych el.
+        for(let item of divele)
+        {
+            item.style.background = "blue";
+        }
+        //Tworzymy im niebieksie tło.
+        //Sposób na przeiterowanie się używając tablicy.
+        //NIEZALECANE (tworzenie nowej tablicy)
+        const inputs = document.getElementsByTagName("input");
+        Array.form(inputs).forEach(element => {console.log(element.name);})
+   </script>
 <body>
-    
+    <h1>Heading</h1>
+    <a href="#">Link tekst</a>
+    <p id="paragraf">paragraf</p>
+    <div class="box">Some text 1 </div>
+    <div class="box">Some text 2 </div>
+    <form action="">
+        <input type="text" name="email">
+    </form>
 </body>
+</html>
 </html>

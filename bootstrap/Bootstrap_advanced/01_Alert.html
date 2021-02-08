@@ -5,10 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script>
+        function addAlert(type,text,timeout)
+        {
+            type = type || "primary" //If null -> default: primary
+            text = text || "Lorem ipsum dolor sit amet." //If null -> default: primary
+            timeout = timeout || 2000 //If null -> default: primary
+             
+            //Stworzenie randomowego typu z tablicy określonych typów.
+            let types = ["primary", "secondary", "success" ,"danger", "warning", "info", "light", "dark"];
+            type = types[Math.floor(Math.random() * types.length)];
 
+
+            let alertNode = document.createElement("div"); //Utworzenie naszego diva.
+            alertNode.classList.add("alert", "alert-"+type, "alert-dismissible", "fade", "show") //Dodanie listy class do naszego diva.
+            alertNode.setAttribute("role", "alert"); //Ustanawianie atrybutu o nazwie "role" i wartości dla niego alert
+            //Tworzenie zawartości naszego alertu
+            let alertcode = ` 
+                <h4 class="alert-heading">.alert-${type}</h4>
+                <p> ${text} </p>
+                <button class="btn-close" type="button" data-bs-dismiss="alert" aria-label="alert close button"></button> 
+            `;
+            
+            let alertInstance = new bootstrap.Alert(alertNode); //Stworzenie uchwytu do dynamicznego obiektu
+            setTimeout(function(){ //alertInstance dobiera się do parametru data-bs-dismiss i podpina się pod niego
+                alertInstance.close(); //Funckja wyłacza powiadomienie po 2 sekundach
+            },timeout)
+
+            alertNode.addEventListener("close.bs.alert", function(){ //Alerty czy się zamknęły
+                console.log("close.bs.alert: alert-"+type+" zamknięty")
+            });
+            alertNode.addEventListener("closed.bs.alert", function(){
+                console.log("closed.bs.alert: alert-"+type+" zamknięty")
+            });
+
+            alertNode.innerHTML = alertcode;
+            let alertContainer = document.getElementById("alerts");
+            //alertContainer.appendChild(alertNode); Na koniec 
+            alertContainer.prepend(alertNode); // Na początek
+        }
+    </script>
 </head>
 <body>
     <div class="container mt-5">
+        <button class="btn btn-primary" onclick="addAlert();">Dodaj alert</button>
+    </div>
+
+    <div id="alerts" class="container mt-5">
         <div class="alert alert-primary alert-dismissible fade show" role="alert">
             <h4 class="alert-heading">alert-primary</h4>
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, soluta!

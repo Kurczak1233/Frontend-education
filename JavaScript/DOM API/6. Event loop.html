@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //EVENT LOOP jest to stos wywołań. Nie działa asynchroniczie, dlatego funkcje wykonują się po kolei
+        //I
+        function first()
+        {
+            throw new Error('some error');
+        }
+        function second()
+        {
+            first();
+        }
+        function third()
+        {
+            second();
+        }
+        third();
+        //IDEALNY PRZYKŁAD NA ZROZUMIENIE LIFO (last in first out);
+        //Errory wywołają się :
+        //UNCAUGHT ERROR:
+        //at FIRST LAST IN (po funkcjach) i FRIST OUT!
+        //at SECOND
+        //at THIRD
+        //at event.loop...
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

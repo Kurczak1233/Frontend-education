@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+</head>
+<body>
+
+    <div class="container">
+        <button data-bs-toggle="modal" data-bs-target="#modalWindow" class="btn btn-info m-2" type="button">Okno #1</button>
+        <button data-bs-toggle="modal" data-bs-target="#modalWindow2" class="btn btn-info m-2" type="button">Okno #2</button>
+    </div>
+    <div class="modal fade" id="modalWindow" tabIndex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tytuł okna</h5>
+                    <button class="close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quia.
+
+                </div>
+                <div class="modal-footer m-2">
+                    <button class="btn btn-warning" type="button">Zapisz</button>
+                    <button class="btn btn-success" type="button" data-bs-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div> <!--Tab index ukrywa okno!-->
+    <!--Statyczne okno! nie da się go pominąć-->
+    <div class="modal fade" id="modalWindow2" tabIndex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Tytuł okna 2</h5>
+                    <button class="close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, quia.
+
+                </div>
+                <div class="modal-footer m-2">
+                    <button class="btn btn-warning" type="button">Zapisz</button>
+                    <button class="btn btn-success" type="button" data-bs-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div> <!--Tab index ukrywa okno!-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

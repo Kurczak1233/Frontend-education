@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload= function()
+        {
+            //Dzięki temu zabiegowi, javascript uruchomi się dopiero na SAMYM końcu ladowań elemetntów statycznych.
+        };
+    </script>
+</head>
+<body id="body">
+   <p id="p">
+       <form id="form" action="">
+           <input id="input" onclick="inputClicked(event)" type="text">
+           <input id="input2" type="text">
+       </form>
+   </p> 
+   <script>
+    //SPOSÓB PREFEROWANY//NAJLEPSZY!
+    function inputClicked(event) //Zawsze przekazujemy do funckji event
+    {
+        console.log(event);
+        console.log("input kliknięty");
+    }
+    //DRUGI SPOSÓB PODPIĘCIA SIĘ DO ELEMENTU
+    let input = document.getElementById("input2");
+    input.onclick = function inputClicked(event) //Zawsze przekazujemy do funckji event
+    {
+        console.log(event);
+        console.log("input2 kliknięty");
+    }
+
+    //Odbieranie klikniętych klawiszy
+    let body = document.getElementById("body");
+    //let body = document.getElementsByTagName("body")[0];
+    body.addEventListener("keydown", onKeyDown);
+    function onKeyDown(event)
+    {
+        console.log(event);
+        console.log("klawisz wciśnięty" + event.key);
+    }
+    body.addEventListener("click", clickTarget);
+    function clickTarget(event)
+    {
+        console.log(event);
+        console.log("click on" + event.target);
+        
+        body.removeEventListener("click", clickTarget);
+    }
+
+</script>
+</body>
+</html>

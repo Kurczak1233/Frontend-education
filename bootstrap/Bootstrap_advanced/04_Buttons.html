@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script>
+        window.onload = function()
+        {
+        let buttons = document.getElementsByTagName("button");
+        let toggleBtnNode = buttons[0];
+        let disposeBtnNode = buttons[1];
+        let testBtnNode = buttons[2];
+
+        let testBtnInstance = new bootstrap.Button(testBtnNode);
+
+        toggleBtnNode.addEventListener("click", function()
+        {
+            testBtnInstance.toggle();
+        });
+        disposeBtnNode.addEventListener("click", function()
+        {
+            testBtnInstance.dispose();
+            testBtnNode.remove();
+        });
+    }
+    </script>
+</head>
+<body>
+    <div class="container m-3">
+        <button class="btn btn-success" type="button">toggle</button>
+        <button class="btn btn-danger" type="button">dispose</button>
+        <button class="btn btn-warning" type="button">TEST BUTTON</button>
+    </div>
+    <hr>
+    <div class="container m-2">
+        <button class="btn btn-primary" type="button">Primary</button>
+        <button class="btn btn-danger" type="button">Danger</button>
+        <button class="btn btn-warning" type="button">Warning</button>
+    </div>
+    <hr>
+    <div class="container">
+        <a href="#" role="button" class="btn btn-info">link (a)</a>
+        <input class="btn btn-secondary" type="button" value="input 1">
+    </div>
+    <hr>
+    <div class="container m-2">
+        <button class="btn btn-outline-primary" type="button">Primary</button>
+        <button class="btn btn-outline-danger" type="button">Danger</button>
+        <button class="btn btn-outline-warning" type="button">Warning</button>
+    </div>
+    <hr>
+    <div class="container m-2">
+        <button class="btn btn-outline-primary btn-sm" type="button">Primary</button>
+        <button class="btn btn-outline-danger btn-md" type="button">Danger</button>
+        <button class="btn btn-outline-warning btn-lg disabled" type="button">Warning</button>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

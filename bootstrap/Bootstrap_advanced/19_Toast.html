@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script>
+        window.onload = function()
+        {
+            let toastNodes = [].slice.call(document.querySelectorAll(".toast")); //Konwertujemy do tablicy
+            let toastList = toastNodes.map(function(toast){
+                let t = new bootstrap.Toast(toast);
+                t.show();
+                return t;
+            });
+        }
+    </script>
+</head>
+<body>
+    <div style="position: relative; min-height:300px;">
+        <div class="toast" data-bs-delay="5000" style="position: absolute; top:0; right:0;">
+            <div class="toast-header">
+                <strong class="mr-auto">Toast</strong>
+                <small>3 minutest ago</small>
+                <button data-bs-dismiss="toast" aria-label="close" class="btn-close ml-2 mb-1 close"></button>
+            </div>
+            <div class="toast-body">
+                Notification 1
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -25,7 +25,7 @@ var poly;
     
     // TODO: Define global variables to represent animated objects in the scene.
     var rotatingRect;  // (DELETE THIS EXAMPLE)
-    
+    var rotatingPoly;
     /**
      *  Builds the data structure that represents the entire picture.
      */
@@ -34,12 +34,12 @@ var poly;
         world = new CompoundObject();  // Root node for the scene graph.
 
         // TODO: Create objects and add them to the scene graph.
-        rotatingpoly = new TransformedObject(poly)
-        rotatingpoly.setScale(2,2).setColor("red"); 
-        world.add(rotatingRrotatingpolyect);
-        // rotatingRect = new TransformedObject(filledRect);   // (DELETE THIS EXAMPLE)
-        // rotatingRect.setScale(2,2).setColor("red"); 
-        // world.add(rotatingRect);
+        // rotatingPoly = new TransformedObject(poly)
+        // rotatingpoly.setScale(2,2).setColor("red"); 
+        // world.add(rotatingpoly);
+        rotatingRect = new TransformedObject(filledRect);   // (DELETE THIS EXAMPLE)
+        rotatingRect.setScale(3.5,0.3).setColor("red"); 
+        world.add(rotatingRect);
     }
     
     /**
@@ -197,6 +197,31 @@ var poly;
         g.strokeRect(-0.5,-0.5,1,1);
     }
     
+    var filledPoly = new SceneGraphNode();
+    filledPoly.doDraw = function(g) {
+            if (arguments.length < 6)
+               return;
+            g.beginPath();
+            g.moveTo(arguments[0],arguments[1]);
+            for (var i = 2; i+1 < arguments.length; i = i + 2) { 
+               g.lineTo(arguments[i],arguments[i+1]);
+            }
+            g.closePath();
+            g.fill();
+        }
+    var poly = new SceneGraphNode();
+    poly.doDraw = function(g)
+    {
+            if (arguments.length < 4)
+               return;
+            g.beginPath();
+            getMatchedCSSRules.moveTo(arguments[0],arguments[1]);
+            for (var i = 2; i+1 < arguments.length; i = i + 2) { 
+               this.lineTo(arguments[i],arguments[i+1]);
+            }
+            g.closePath();
+            g.stroke();
+        }
     var filledCircle = new SceneGraphNode(); // Filled circle, diameter = 1, center = (0,0)
     filledCircle.doDraw = function(g) {
         g.beginPath();

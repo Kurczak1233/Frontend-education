@@ -45,7 +45,6 @@
         var b = Math.floor(256*Math.random());
         return "rgb(" + r + "," + g + "," + b + ")";
     }
-        
     /**
      * This function is called in init() to set up mouse event handling
      * on the canvas.  You can modify the nested functions doMouseDown,
@@ -82,6 +81,7 @@
                 document.addEventListener("mouseup", doMouseUp, false);
             }
             colorChoice = Number(document.getElementById("colorChoice").value);
+
             // TODO: Anything else to do when mouse is first pressed?
         }
         
@@ -101,7 +101,6 @@
             if ( Math.abs(x-prevX) + Math.abs(y-prevY) < 3 ) {
                 return;  // don't draw squares too close together
             }
-                
             if (colorChoice == 0) {
                 graphics.fillStyle = randomColorString();
             }
@@ -112,7 +111,8 @@
                 graphics.fillStyle = "green";
             }
             else if (colorChoice == 3) {
-                graphics.fillStyle = "blue";
+                graphics.fillStyle = "white";
+                graphics.fillRect(1000,1000,1000,1000);
             }
             // 8 - kąt
             var numberOfSides = 8,
@@ -131,7 +131,10 @@
             graphics.fill();
             //  graphics.fillRect(x-20,y-20,40,40);
             //  graphics.strokeRect(x-20,y-20,40,40);
-            
+            function clear()
+            {
+                clearRect(0, 0, 600,600);
+            }
             /*------------------------------------------------------------*/
             
             prevX = x;  // update prevX,prevY to prepare for next call to doMouseMove
@@ -277,6 +280,7 @@
         <option value="2">Green</option>
         <option value="3">Blue</option>
     </select>
+    <button id="clear" onclick="clear()">Clear</button>
 </p>
 
 <div id="canvasholder">

@@ -117,12 +117,12 @@
             // 8 - kąt
             var numberOfSides = 8,
                 size = 30;
-
+                
                 graphics.beginPath();
                 graphics.moveTo (x +  size * Math.cos(0), y +  size *  Math.sin(0));           
 
             for (var i = 1; i <= numberOfSides;i += 1) {
-                graphics.lineTo (x + size * Math.cos(i * 2 * Math.PI / numberOfSides), y + size * Math.sin(i * 2 * Math.PI / numberOfSides));
+                graphics.lineTo (x+ size * Math.cos(i * 2 * Math.PI / numberOfSides), y + size * Math.sin(i * 2 * Math.PI / numberOfSides));
             }
 
             graphics.strokeStyle = "#000000";

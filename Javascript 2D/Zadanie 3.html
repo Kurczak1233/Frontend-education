@@ -20,12 +20,20 @@
     var pixelSize;  // The size of one pixel, in the transformed coordinates.
             
     var frameNumber = 0;  // Current frame number. goes up by one in each frame.
-var poly;
+    
     var world;  // A SceneGraphNode representing the entire scene. 
     
     // TODO: Define global variables to represent animated objects in the scene.
     var rotatingRect;  // (DELETE THIS EXAMPLE)
-    var rotatingPoly;
+    var rotatingRect2;  // (DELETE THIS EXAMPLE)
+    var rotatingRect3;
+    var triangle1;  // (DELETE THIS EXAMPLE)
+    var triangle2;  // (DELETE THIS EXAMPLE)
+    var triangle3;  // (DELETE THIS EXAMPLE)
+    var poly1;  // (DELETE THIS EXAMPLE)
+    // var triangle2;  // (DELETE THIS EXAMPLE)
+    // var triangle3;  // (DELETE THIS EXAMPLE)
+    //var rotatingPoly;
     /**
      *  Builds the data structure that represents the entire picture.
      */
@@ -38,8 +46,48 @@ var poly;
         // rotatingpoly.setScale(2,2).setColor("red"); 
         // world.add(rotatingpoly);
         rotatingRect = new TransformedObject(filledRect);   // (DELETE THIS EXAMPLE)
-        rotatingRect.setScale(3.5,0.3).setColor("red"); 
+        rotatingRect.setScale(2.5,0.2).setColor("red"); 
+        rotatingRect.translateX=2;
+        rotatingRect.translateY=1.8;
         world.add(rotatingRect);
+
+        rotatingRect2 = new TransformedObject(filledRect);   // (DELETE THIS EXAMPLE)
+        rotatingRect2.setScale(2.6,0.3).setColor("red"); 
+        rotatingRect2.translateX=-2;
+        rotatingRect2.translateY=1;
+        world.add(rotatingRect2);
+
+        rotatingRect3 = new TransformedObject(filledRect);   // (DELETE THIS EXAMPLE)
+        rotatingRect3.setScale(3.5,0.4).setColor("red"); 
+        rotatingRect3.translateX=0;
+        rotatingRect3.translateY=-1;
+        world.add(rotatingRect3);
+
+        triangle1 = new TransformedObject(filledTriangle);   // (DELETE THIS EXAMPLE)
+        triangle1.setScale(0.6,2.2).setColor("blue"); 
+        triangle1.translateX=0;
+        triangle1.translateY=-3.2;
+        world.add(triangle1);
+
+        triangle2 = new TransformedObject(filledTriangle);   // (DELETE THIS EXAMPLE)
+        triangle2.setScale(0.4,1.9).setColor("purple"); 
+        triangle2.translateX=-2;
+        triangle2.translateY=-1;
+        
+        world.add(triangle2);
+
+        triangle3 = new TransformedObject(filledTriangle);
+           // (DELETE THIS EXAMPLE)
+        triangle3.setScale(0.4,1.8).setColor("green"); 
+        triangle3.translateX=2;
+        triangle3.translateY=0;
+        world.add(triangle3);
+
+        poly = new TransformedObject(line);   // (DELETE THIS EXAMPLE)
+        poly.setScale(1,1).setColor("blue"); 
+        poly.translateX=-3.3;
+        poly.translateY=1;
+        world.add(poly);
     }
     
     /**
@@ -51,7 +99,8 @@ var poly;
 
         // TODO: Update state in preparation for drawing the next frame.
         rotatingRect.setRotation(frameNumber*0.75); // (DELETE THIS EXAMPLE)
-        
+        rotatingRect2.setRotation(frameNumber*0.75);
+        rotatingRect3.setRotation(frameNumber*0.75);
     }
  
 
@@ -182,8 +231,14 @@ var poly;
     var line = new SceneGraphNode();  // Line from (-0.5,0) to (0.5,0)
     line.doDraw = function(g) {
         g.beginPath();
-        g.moveTo(-0.5,0);
-        g.lineTo(0.5,0);
+        //g.moveTo(-0.1,0);
+       // g.beginPath();
+                g.moveTo (size * Math.cos(0),size *  Math.sin(0));           
+        var numberOfSides = 8,
+                size = 0.6;
+        for (var i = 0; i <= numberOfSides;i += 1) {
+                g.lineTo (size * Math.cos(i * 2 * Math.PI / numberOfSides), size * Math.sin(i * 2 * Math.PI / numberOfSides));
+            }
         g.stroke();
     }
     

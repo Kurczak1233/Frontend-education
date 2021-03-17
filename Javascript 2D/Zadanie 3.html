@@ -24,15 +24,15 @@
     var world;  // A SceneGraphNode representing the entire scene. 
     
     // TODO: Define global variables to represent animated objects in the scene.
-    var rotatingRect;  // (DELETE THIS EXAMPLE)
-    var rotatingRect2;  // (DELETE THIS EXAMPLE)
+    var rotatingRect; 
+    var rotatingRect2;  
     var rotatingRect3;
-    var triangle1;  // (DELETE THIS EXAMPLE)
-    var triangle2;  // (DELETE THIS EXAMPLE)
-    var triangle3;  // (DELETE THIS EXAMPLE)
-    var poly1;  // (DELETE THIS EXAMPLE)
-    // var triangle2;  // (DELETE THIS EXAMPLE)
-    // var triangle3;  // (DELETE THIS EXAMPLE)
+    var triangle1; 
+    var triangle2; 
+    var triangle3; 
+    var poly1;  
+    // var triangle2; 
+    // var triangle3;  
     //var rotatingPoly;
     /**
      *  Builds the data structure that represents the entire picture.
@@ -45,49 +45,73 @@
         // rotatingPoly = new TransformedObject(poly)
         // rotatingpoly.setScale(2,2).setColor("red"); 
         // world.add(rotatingpoly);
-        rotatingRect = new TransformedObject(filledRect);   // (DELETE THIS EXAMPLE)
+        rotatingRect = new TransformedObject(filledRect);  
         rotatingRect.setScale(2.5,0.2).setColor("red"); 
         rotatingRect.translateX=2;
         rotatingRect.translateY=1.8;
         world.add(rotatingRect);
 
-        rotatingRect2 = new TransformedObject(filledRect);   // (DELETE THIS EXAMPLE)
+        rotatingRect2 = new TransformedObject(filledRect);   
         rotatingRect2.setScale(2.6,0.3).setColor("red"); 
         rotatingRect2.translateX=-2;
         rotatingRect2.translateY=1;
         world.add(rotatingRect2);
 
-        rotatingRect3 = new TransformedObject(filledRect);   // (DELETE THIS EXAMPLE)
+        rotatingRect3 = new TransformedObject(filledRect);  
         rotatingRect3.setScale(3.5,0.4).setColor("red"); 
         rotatingRect3.translateX=0;
         rotatingRect3.translateY=-1;
         world.add(rotatingRect3);
 
-        triangle1 = new TransformedObject(filledTriangle);   // (DELETE THIS EXAMPLE)
+        triangle1 = new TransformedObject(filledTriangle);   
         triangle1.setScale(0.6,2.2).setColor("blue"); 
         triangle1.translateX=0;
         triangle1.translateY=-3.2;
         world.add(triangle1);
 
-        triangle2 = new TransformedObject(filledTriangle);   // (DELETE THIS EXAMPLE)
+        triangle2 = new TransformedObject(filledTriangle);  
         triangle2.setScale(0.4,1.9).setColor("purple"); 
         triangle2.translateX=-2;
         triangle2.translateY=-1;
-        
         world.add(triangle2);
 
         triangle3 = new TransformedObject(filledTriangle);
-           // (DELETE THIS EXAMPLE)
+           
         triangle3.setScale(0.4,1.8).setColor("green"); 
         triangle3.translateX=2;
         triangle3.translateY=0;
         world.add(triangle3);
 
-        poly = new TransformedObject(line);   // (DELETE THIS EXAMPLE)
+        poly = new TransformedObject(line);   
         poly.setScale(1,1).setColor("blue"); 
         poly.translateX=-3.3;
         poly.translateY=1;
-        world.add(poly);
+        world.add(poly); 
+        poly = new TransformedObject(line);   
+        poly.setScale(1,1).setColor("blue"); 
+        poly.translateX=-0.8;
+        poly.translateY=1;
+        world.add(poly); 
+        poly = new TransformedObject(line);   
+        poly.setScale(1,1).setColor("blue"); 
+        poly.translateX=0.8;
+        poly.translateY=1.8;
+        world.add(poly); 
+        poly = new TransformedObject(line);   
+        poly.setScale(1,1).setColor("blue"); 
+        poly.translateX=3.2;
+        poly.translateY=1.8;
+        world.add(poly); 
+        poly = new TransformedObject(line);   
+        poly.setScale(1,1).setColor("blue"); 
+        poly.translateX=1.6;
+        poly.translateY=-1;
+        world.add(poly); 
+        poly = new TransformedObject(line);   
+        poly.setScale(1,1).setColor("blue"); 
+        poly.translateX=-1.6;
+        poly.translateY=-1;
+        world.add(poly); 
     }
     
     /**
@@ -98,7 +122,7 @@
         frameNumber++;
 
         // TODO: Update state in preparation for drawing the next frame.
-        rotatingRect.setRotation(frameNumber*0.75); // (DELETE THIS EXAMPLE)
+        rotatingRect.setRotation(frameNumber*0.75); 
         rotatingRect2.setRotation(frameNumber*0.75);
         rotatingRect3.setRotation(frameNumber*0.75);
     }

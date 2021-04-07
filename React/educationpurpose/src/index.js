@@ -3,10 +3,19 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Footer from './Footer/Footer';
+import Heading from './Heading/Heading';
+
+const CompanyData = {
+  name: "Rocksoft",
+  street: "Katowicka",
+}
 
 ReactDOM.render(
   <React.StrictMode>
+    <Heading headerTitle="Welcome on page"/>
     <App />
+    <Footer CompanyData={CompanyData} email="example@com"/>
   </React.StrictMode>,
   document.getElementById('root')
 );

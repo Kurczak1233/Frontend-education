@@ -27,4 +27,5 @@ class Message extends React.Component{
     }
 }
 
+// eslint-disable-next-line no-undef
 ReactDOM.render(<Message />, document.getElementById("root"))

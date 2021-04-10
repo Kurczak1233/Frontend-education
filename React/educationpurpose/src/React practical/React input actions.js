@@ -11,12 +11,12 @@ class Input extends React.Component{
     }
     clickHandler = () => {
         this.setState({
-            value: "" //Opisuje zmianę tekstową
+            text: "" //Opisuje zmianę tekstową
         })
     }
     inputChanged = (e) => {
         this.setState({
-            value: e.state.text
+            text: e.state.text
         })
     }
     render(){

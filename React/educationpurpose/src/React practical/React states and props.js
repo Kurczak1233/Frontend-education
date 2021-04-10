@@ -1,6 +1,6 @@
 import React from 'react'
 
-class ItemList extends React.Component{
+class ShoppingList extends React.Component{
     state = {
         item1: "coś",
         item2: "coś2",

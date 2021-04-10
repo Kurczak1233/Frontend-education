@@ -9,12 +9,12 @@ class Input extends React.Component{
             text: ""   
         } 
     }
-    ClickHandler = () => {
+    clickHandler = () => {
         this.setState({
-            value: ""
+            value: "" //Opisuje zmianę tekstową
         })
     }
-    InputChanged = (e) => {
+    inputChanged = (e) => {
         this.setState({
             value: e.state.text
         })
@@ -22,8 +22,8 @@ class Input extends React.Component{
     render(){
         return(
             <React.Fragment>
-                <input placeholder="Wpisz" value={this.state.value} onChange={this.InputChanged} type="text"></input>
-                <button onClick={this.ClickHandler}>Reset</button>
+                <input placeholder="Wpisz" value={this.state.value} onChange={this.handleChange} type="text"></input>
+                <button onClick={this.handleClick}>Reset</button>
                 <h1>{this.state.text}</h1>
             </React.Fragment>
         )

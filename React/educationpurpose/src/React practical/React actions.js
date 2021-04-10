@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { Children } from 'react';
 
 class App extends React.Component(){
-    state ={
+    constructor()
+    {
+
+        super();
+    this.state = {
         text: "",
     }
-    render() {
-        return (
+}
+    ClickHandler = () =>
+    {
+        const letter = "a"
+        this.setState({
+            text: this.state.text + letter,
+        });
+    }
+    render() { 
+        return ( //Strukktura tworzy sie ponownie po zmianie stanów!
         <React.Fragment>
-            <button>Dodaj "A"</button>
-            <h1>{this.state.text}</h1>
+            <button onClick={this.ClickHandler}>Dodaj "A"</button>
+            <PanelResult text={this.state.text} > bbbb</PanelResult> 
         </React.Fragment>
-
         )
     }
 }
 
+const PanelResult = (props) =>
+{
+    return(
+        <h1>{props.text}:{props.Children}</h1>
+    )
+}
 // eslint-disable-next-line no-undef
 ReactDOM.render(<App />, document.getElementById("root"));

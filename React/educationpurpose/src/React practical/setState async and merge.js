@@ -20,6 +20,20 @@ class App extends React.Component{
         })
         console.log(this.state.counter);// 0 Bo jest ASYNC!
     }
+    solution = () => {
+
+        this.setState(prevState => ({
+            counter: prevState.counter+1
+        }))
+        this.setState(prevState => ({
+            counter: prevState.counter+2
+        }))
+        this.setState(prevState => ({
+            counter: prevState.counter+3
+        }))
+        console.log(this.state.counter);// 6 Bo jest ASYNC!
+
+    }
     render()
     {
         return(<h1>{this.state.counter}</h1>) //3 Bo MERGUJE i NADPISUJE przez ostatnią!

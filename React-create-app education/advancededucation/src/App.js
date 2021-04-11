@@ -1,25 +1,42 @@
-import logo from './logo.svg';
+import React from 'react'
 import './App.css';
+import SwitchButton from './SwitchButton'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props)
+  {
+    super(props)
+    this.state = {
+      time: 0,
+      isActive: false,
+    }
+  }
+  handleStartTime = () => {
+    this.setState({
+      isActive: !this.state.isActive
+    })
+    if(this.state.isActive === true)
+    {
+      clearInterval(this.IdInterval)
+    }
+    else{
+      this.IdInterval = setInterval(() => this.addSecond(), 1000)
+    }
+  }
+  addSecond = () => {
+    this.setState({
+      time: this.state.time + 1
+    })
+  }
+  render()
+  { 
+    return(
+      <React.Fragment>
+        <div className="text-center">{this.state.time}</div>
+        <SwitchButton click={this.handleStartTime} active={this.state.isActive}></SwitchButton>
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;

@@ -39,18 +39,17 @@ class Message2 extends React.Component{
         this.state = {
             city:""
         }
+        
     }
     handleSubmit = e => {
         e.PreventDefault()
-        this.setState({
-            state: e.input.value
-        })
+        const name = e.target.elements.username.value;
     }
         render()
     {
         return(
             <form onSubmit={this.handleSubmit}>
-                <input value={this.state.city} type="text" placeholder="type..." />
+                <input ref="username" value={this.state.city} type="text" placeholder="type..." />
                 <button type="submit">Submit</button>
             </form>
         )

@@ -17,7 +17,7 @@ handleChange = e => {
 handleSubmit = e => {
     e.PreventDefault()
     this.setState({
-        state: e.input.value
+        city: e.input.value
     })
 }
     render()

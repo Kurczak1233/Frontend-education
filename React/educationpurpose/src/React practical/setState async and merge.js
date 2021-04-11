@@ -23,8 +23,8 @@ class App extends React.Component{
     solution = () => {
         //NIe przekazujemy bezpośrednio obiektu {}, lecz przekazujemy funkcje anonimową strzałkową.
         //Zwracny jest jeden obiekt.
-        this.setState(prevState => ({
-            counter: prevState.counter+1
+        this.setState(prevState => ({ //Arugment z lambda function
+            counter: prevState.counter+1 //Zwaracący obiekt
         }))
         this.setState(prevState => ({
             counter: prevState.counter+2
@@ -33,7 +33,15 @@ class App extends React.Component{
             counter: prevState.counter+3
         }))
         console.log(this.state.counter);// 0 Bo jest ASYNC!
-
+    }
+    notCorrectSolution = () => {
+        this.setState(() => ({
+            counter: 5
+        }))
+        this.setState(prevState => ({
+            counter: this.counter+1
+        }))
+        console.log(this.state.counter);// 0 Bo jest ASYNC! A niżej będzie 1, bo odwołujemy się do aktualnego 0 z state.
     }
     render()
     {

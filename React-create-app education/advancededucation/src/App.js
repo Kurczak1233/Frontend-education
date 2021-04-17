@@ -1,12 +1,8 @@
-import React from 'react'
+import React, { useState} from "react";
 import './App.css';
-import SwitchButton from './SwitchButton'
 
 const App = () => {
-  // state = {
-  //   time: 0,
-  //   isActive: false,
-  // }
+  const [comments, setComments] = useState([...data]);
   const data = [
     { id: 1, title: 'Wiadomość 1', body:'Zawartość...'},
     { id: 2, title: 'Wiadomość 2', body:'Zawartość...'}
@@ -20,6 +16,10 @@ const App = () => {
     })
     console.log(data);
   }, 4000)
+
+  const getData = () => { //fetchData
+    setComments([...data]) //Kopia
+  }
 
   // handleStartTime = () => {
   //   this.setState({

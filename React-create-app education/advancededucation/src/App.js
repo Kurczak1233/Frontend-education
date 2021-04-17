@@ -23,7 +23,7 @@ const App = () => {
   useEffect(() => {
     setInterval(this.getData, 5000)
     //Fetch:
-    fetch('data')
+    fetch('data/words.json') //File
   })
 
 

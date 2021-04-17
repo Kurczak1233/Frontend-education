@@ -23,7 +23,9 @@ const App = () => {
   useEffect(() => {
     setInterval(this.getData, 5000)
     //Fetch:
-    fetch('data/words.json') //File
+    fetch('data/words.json')//File
+    .then(respone => respone.json())
+    .then(data => {setComments(data)}) //Nazwy są dowolne
   })
 
 

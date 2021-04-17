@@ -22,7 +22,11 @@ const App = () => {
   }
   useEffect(() => {
     setInterval(this.getData, 5000)
+    //Fetch:
+    fetch('data')
   })
+
+
 
   // handleStartTime = () => {
   //   this.setState({

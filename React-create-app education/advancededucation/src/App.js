@@ -1,4 +1,4 @@
-import React, { useState} from "react";
+import React, { useEffect, useState} from "react";
 import './App.css';
 
 const App = () => {
@@ -20,6 +20,9 @@ const App = () => {
   const getData = () => { //fetchData
     setComments([...data]) //Kopia
   }
+  useEffect(() => {
+    setInterval(this.getData, 5000)
+  })
 
   // handleStartTime = () => {
   //   this.setState({

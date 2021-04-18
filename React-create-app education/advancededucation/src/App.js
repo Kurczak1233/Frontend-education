@@ -26,6 +26,7 @@ const App = () => {
     fetch('data/words.json')//File
     .then(respone => respone.json())
     .then(data => {setComments(data)}) //Nazwy są dowolne
+    .catch(err => console.log("error" + err))
   })
 
 

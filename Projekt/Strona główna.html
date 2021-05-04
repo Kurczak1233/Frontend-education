@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="mb-0">
+    <header>
+        <div container class="p-5 intro-background" fluid">
+            <div container fluid class="transparent-image pl-5 p-3">
+                <div class="row height-400">
+                    <div class="col-12 mt-auto mb-auto">
+                        <div class="indent-blue"></div>
+                        <p class="d-md-block d-none mt-3 text-white font-size-big">Are you ready to take up THE QUEST?</p>
+                        <p class="d-md-none d-block text-white font-size-medium">Are you ready to take up THE QUEST?</p>
+                        <a asp-controller="Home" asp-action="SampleEnglishTest" class="btn btn-info" aria-label="button" type="button">Test your english!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <partial name="_NavigationBar" />
+    </header>
+    <main role="main" class="pb-3">
+        
+<section container-fluid>
+    <div class="row m-0" style="width:100%">
+        <div class="col-12 main-banner">
+            <div class="col-12 pl-5 offset-md-4 col-md-7">
+                <div class="indent-blue mt-5"></div>
+                <p class="font-size-big text-white">Improve your english.</p>
+                <p class="font-size-medium text-white">Work your way up to the fluency.</p>
+                <a asp-controller="User" asp-action="Register" class="btn btn-info mt-5 font-size-medium" type="button" aria-labelledby="Sign up button">Sing up today</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="row justify-content-center mt-3">
+        <div class="indent-blue mt-5"></div>
+        <div class="col-12 text-center font-size-big mb-3">Available levels:</div>
+        <div class="col-xl-4 col-12 ">
+            <div class="card ml-auto mr-auto card-width mb-5">
+                <img src="https://cdn.pixabay.com/photo/2017/09/21/13/32/girl-2771936_960_720.jpg" class="card-height card-img-top" alt="...">
+                <div class="card-body shadow-lg warm-orange-color text-center">
+                    <span class="font-size-medium">Intermediate B1</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-12">
+            <div class="card shadow-lg ml-auto mr-auto card-width mb-5">
+                <img src="https://cdn.pixabay.com/photo/2016/11/14/05/15/academic-1822683_960_720.jpg" class="card-height card-img-top" alt="...">
+                <div class="card-body warm-orange-color text-center">
+                    <span class="font-size-medium">Upper-Intermediate B2</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-4 col-12">
+            <div class="card shadow-lg ml-auto mr-auto card-width mb-5">
+                <img src="https://cdn.pixabay.com/photo/2018/06/27/07/45/student-3500990_960_720.jpg" class="card-img-top card-height" alt="...">
+                <div class="card-body warm-orange-color text-center">
+                    <span class="font-size-medium">Advanced C1</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container-fluid warm-orange-color">
+    <div class="row justify-content-center">
+        <div class="indent-blue mt-5 "></div>
+        <div class="col-12 text-center">
+            <span class="font-size-big">The English Quest:</span>
+        </div>
+        <div class="text-center col-12 font-size-medium">Is an open source platform.</div>
+        <div class=" text-center col-12 font-size-medium">Do not charge you for learning.</div>
+        <div class=" text-center col-12 font-size-medium font-italic mt-4">Want to contribute to the platform?</div>
+        <a asp-controller="Home" asp-action="Contact" class="btn btn-info mb-5 mt-3 font-size-medium" type="button">Contact us</a>
+    </div>
+</section>
+<section class="container">
+    <div class="row justify-content-center">
+        <div class="indent-blue mt-5"></div>
+        <div class="col-12 font-size-big text-center">
+            <span class="light-blue-color-text">Why </span><span>should you learn english?</span>
+        </div>
+        <div class="col-md-7 text-right d-md-block d-none">
+            <img src="/images/QuestionMark.png" style="height:350px;" class="img-fluid" />
+        </div>
+        <div id="EncouragementLinks" class="text-md-left text-center mt-3 col-12 col-md-5">
+            <a id="obj" class="text-decoration-none" data-toggle="collapse" href="#1" role="button" aria-expanded="false" aria-controls="1">
+                <h2 class="d-block">Popularity&nbsp;&nbsp;<i class="bi bi-plus-square-fill"></i></h2>
+            </a>
+            <div class="collapse text-right font-size-rather-small" id="1">
+                <div class="col-12 card card-body border-0">
+                    <p class="text-left">English is the most popular language over the world!</p>
+                </div>
+            </div>
+            <a id="obj" class="text-decoration-none" data-toggle="collapse" href="#2" role="button" aria-expanded="false" aria-controls="2">
+                <h2 class="d-block">Possibilities&nbsp;&nbsp;<i class="bi bi-plus-square-fill"></i></h2>
+            </a>
+            <div class="collapse text-right font-size-rather-small" id="2">
+                <div class="col-12 card card-body border-0">
+                    <p class="text-left">You will be able to speak to almost everyone. Learning english will make you be more knowledgeable and more elequent</p>
+                </div>
+            </div>
+            <a id="obj" class="text-decoration-none" data-toggle="collapse" href="#3" role="button" aria-expanded="false" aria-controls="3">
+                <h2 class="d-block">Accessibility&nbsp;&nbsp;<i class="bi bi-plus-square-fill"></i></h2>
+            </a>
+            <div class="collapse text-right font-size-rather-small" id="3">
+                <div class="col-12 card card-body border-0">
+                    <p class="text-left">Most of the internet content is written in English. Once you learn it you will be able to read and watch almost everything in web!</p>
+                </div>
+            </div>
+            <a id="obj" class="text-decoration-none" data-toggle="collapse" href="#4" role="button" aria-expanded="false" aria-controls="4">
+                <h2 class="d-block">Pleasure&nbsp;&nbsp;<i class="bi bi-plus-square-fill"></i></h2>
+            </a>
+            <div class="collapse text-right font-size-rather-small" id="4">
+                <div class="col-12 card card-body border-0">
+                    <p class="text-left">Many people derive immense pleasure from learning english. The more aware you are about your language, the better you feel!</p>
+                </div>
+            </div>
+            <a id="obj" class="text-decoration-none" data-toggle="collapse" href="#5" role="button" aria-expanded="false" aria-controls="5">
+                <h2 class="d-block">Prestige&nbsp;&nbsp;<i class="bi bi-plus-square-fill"></i></h2>
+            </a>
+            <div class="collapse text-right font-size-rather-small" id="5">
+                <div class="col-12 card card-body border-0">
+                    <p class="text-left">The way you speak - especially in foreing language, makes you look more intelligent. This is definitely something which may impress your friends or colleagues!</p>
+                </div>
+            </div>
+            <a id="obj" class="text-decoration-none" data-toggle="collapse" href="#6" role="button" aria-expanded="false" aria-controls="6">
+                <h2 class="d-block">Knowledge&nbsp;&nbsp;<i class="bi bi-plus-square-fill"></i></h2>
+            </a>
+            <div class="collapse text-right font-size-rather-small" id="6">
+                <div class="col-12 card card-body border-0">
+                    <p class="text-left">Not only will you learn the basics of English grammar, but also of other subjects! When you read a text you will have to understand it's merits which may broaden your horizons.</p>
+                </div>
+            </div>
+            <a id="obj" class="text-decoration-none" data-toggle="collapse" href="#7" role="button" aria-expanded="false" aria-controls="7">
+                <h2 class="d-block">Development&nbsp;&nbsp;<i class="bi bi-plus-square-fill"></i></h2>
+            </a>
+            <div class="collapse text-right font-size-rather-small" id="7">
+                <div class="col-12 card card-body border-0">
+                    <p class="text-left">After a while, you will be able to take some English tests. If you pass those, you will be able to work up your way to the top in your company.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="vis" fluid class="light-blue-color d-none d-md-block position-relative">
+    <div class="p-0 col-12 font-size-big text-center d-flex align-items-center justify-content-center" style="height:300px;">
+        <div id="firstBlock" class="justify-content-center" style="top:15%; left:auto;">
+            <p class="col-12">Discover your chance</p>
+            <a id="invisible" class="invisible btn text-white btn-lg dark-blue-color">Sign up</a>
+        </div>
+    </div>
+    <div id="visability" class="invisible circle warm-orange-color position-absolute p-0 col-12 font-size-big text-center d-flex align-items-center justify-content-center" style="height:300px; top: 0px;">
+        <div id="secondBlock">
+            <div class="justify-content-center">
+                <p class="dark-blue-text-color col-12">Explore the platform!</p>
+                <a asp-controller="User" asp-action="Register" id="visable" class=" btn text-white btn-lg dark-blue-color">Sign up</a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="row  text-center justify-content-center">
+        <div class="indent-blue mt-5 "></div>
+        <div class="col-12 font-size-medium mb-3">The platform consists of:</div>
+        <div class="col-md-4 col-12">
+            <p class="font-size-big font-weight-bold">5</p>
+            <p class="font-size-rather-small">Fields of study</p>
+        </div>
+        <div class="col-md-4 col-12">
+            <p class="font-size-big font-weight-bold">100+</p>
+            <p class="font-size-rather-small">Quizes to solve</p>
+        </div>
+        <div class="col-md-4 col-12">
+            <p class="font-size-big font-weight-bold">1500+</p>
+            <p class="font-size-rather-small">Registered users</p>
+        </div>
+    </div>
+</section>
+<!-- <script>
+    $('[id="obj"]').each(function () {
+        $(this).on("click", function () {
+        var div = $(this).next();
+        var divId = "#" + div.attr("Id");
+        $(divId).toggle('500');
+        $("i", this).toggleClass("bi-plus-square-fill bi-dash-square-fill");
+        });
+    })
+    //Initial values
+    var scrollTop = $(document).scrollTop();
+    var elementOffset = $('#visability').offset().top;
+    var distance = (elementOffset);
+    var document = $(document);
+    //Resizer API (get new values)
+    const resizeObserver = new ResizeObserver(entries => {
+        scrollTop = $(document).scrollTop();
+        elementOffset = $('#visability').offset().top;
+        distance = (elementOffset);
+    });
+    resizeObserver.observe(document.body)
+    //
+    $(window).mousemove(function (event) {
+        $("#visability").removeClass("invisible");
+        var x = (event.pageX);
+        var y = (event.pageY - distance);
+        var height = 300;
+        var width = $(window).width();
+        var section = document.getElementById('visability');
+        section.style.clipPath = "circle(65px at " + (parseFloat(x / width) * 100) + "% " + (parseFloat(y / height) * 100) + "%)";
+    });
+</script> -->
+
+    </main>
+
+    <footer id="footer" class="dark-blue-color text-center text-white">
+        <div class="container p-4">
+            <section class="mb-4">
+                <p class="font-size-rather-small">Michał Kupczak</p>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.facebook.com/hahxdxd" role="button">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/michał-kupczak" role="button">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/Kurczak1233" role="button">
+                    <i class="bi bi-github"></i>
+                </a>
+            </section>
+            <section class="mb-4">
+                <p>
+                    This website was made by a college student who has worked on this project in order to develop his general .NET and web development skills. This project may be continued as a full scale platform so for this reason any amount of support is greatly appreciated. There is always an option that you may want to learn something just as I just did.
+                </p>
+            </section>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            Copyright ©2021 TheEnglishQuest. All rights reserved worldwide.
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.js" asp-append-version="true"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+</body>
+</html>
+<!-- <script>
+    window.onscroll = function () { myFunction() };
+    var navbar = document.getElementById("navbar");
+    var fixed = navbar.offsetTop;
+    function myFunction() {
+        if (window.pageYOffset >= fixed) {
+            navbar.classList.add("fixed-top");
+            navbar.setAttribute("style", "background-color:rgb(66, 239, 245);");
+            navbar.style.transition = "all 1s";
+        } else {
+            navbar.classList.remove("fixed-top");
+            navbar.removeAttribute("style");
+            navbar.style.transition = "all 1s";
+        }
+    }
+</script> -->

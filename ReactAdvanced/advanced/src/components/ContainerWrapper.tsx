@@ -1,7 +1,9 @@
-const ContainerWrapper = (childern: JSX.Element) => {
-    return <div>
+interface IContainerWrapper {
+    children: React.ReactNode
+}
 
-    </div>
+const ContainerWrapper = ({children}: IContainerWrapper) => {
+    return <div>{children}</div>;
 }
 
 export default ContainerWrapper;

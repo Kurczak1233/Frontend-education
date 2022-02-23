@@ -1,0 +1,34 @@
+@import "src/Styles/Common.scss";
+.time-line-main__section-wrapper {
+    height: 4px;
+    width: 100%;
+    display: flex;
+    .time-line-main__section-short-part {
+        height: 4px;
+        border-radius: 99px;
+        background-color: $dark-gray-color;
+        width: 46px;
+    }
+}
+.time-line-main__section-wrapper-reversed {
+    height: 4px;
+    display: flex;
+}
+.time-line-main__section-wrapper-draggeable-space {
+    height: 40px;
+    width: 49px;
+    position: relative;
+    display: flex;
+    top: -18px;
+    color: $transparent-color;
+    align-items: center;
+}
+.time-line-main__section-wrapper-draggeable-space--small {
+    height: 40px;
+    width: 4px;
+    position: relative;
+    display: flex;
+    top: -18px;
+    color: $transparent-color;
+    align-items: center;
+}

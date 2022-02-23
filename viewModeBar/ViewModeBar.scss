@@ -1,0 +1,25 @@
+@import "src/Styles/Common.scss";
+.time-line-main__header-mode-container {
+    background: $light-gray-background;
+    position: absolute;
+    z-index: 2;
+    right: 0px;
+    width: 232px;
+    padding: 16px;
+    height: 50px;
+    display: flex;
+    cursor: auto !important;
+    align-items: center;
+    .time-line_main__header-mode-bar {
+        width: 100%;
+        height: 4px;
+        border-radius: 99px;
+        background-color: $dark-gray-color;
+        display: flex;
+        justify-content: space-between;
+    }
+    .time-line-main__main-dot {
+        position: absolute;
+        z-index: 4;
+    }
+}

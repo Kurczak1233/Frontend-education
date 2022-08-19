@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HtmlVsText from "../components/HtmlVsText.vue";
-import DeclarativesAndMethods from "../components/DeclarativesAndMethods.vue";
+import HtmlVsText from "../components/AboutViewComponents/HtmlVsText.vue";
+import DeclarativesAndMethods from "../components/AboutViewComponents/DeclarativesAndMethods.vue";
 </script>
 
 <template>

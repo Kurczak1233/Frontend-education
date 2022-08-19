@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref } from "vue";
+import { reactive, ref, computed } from "vue";
 
 interface ITest {
   className: string;
@@ -22,24 +22,32 @@ const secondRedBlue = () => {
 const secondRedRed = () => {
   classRef.value = "red";
 };
+
+const isTextRed = computed(() => {
+  return classRef.value === "red";
+});
 </script>
 
 <template>
   <div>
-    <h1 @click="changeClassNameToRed()" :class="titleClass.className">
+    <h1 @click="changeClassNameToRed" :class="titleClass.className">
       Make me red
     </h1>
-    <div @click="changeClassNameToBlue()">Test</div>
-    <h2 @click="secondRedRed()" :class="classRef">Second red with ref</h2>
-    <h3 @click="secondRedBlue()">Button to blue</h3>
+    <div @click="changeClassNameToBlue">Test</div>
+    <h2 @click="secondRedRed" :class="classRef">Second red with ref</h2>
+    <h3 @click="secondRedBlue">Button to blue</h3>
+    <div>Is text red? : {{ isTextRed }}</div>
   </div>
 </template>
 
-<style>
+<style scoped>
 .red {
   color: red;
 }
 .blue {
   color: blue;
+}
+.green {
+  color: green;
 }
 </style>

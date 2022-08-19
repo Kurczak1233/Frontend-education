@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ComponentLifecycle from "../components/ComponentLifecycle/ComponentLifecycle.vue";
+import ComponentLifecycle from "../components/ComponentLifecycleComponents/ComponentLifecycle.vue";
 </script>
 
 <template>

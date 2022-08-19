@@ -22,6 +22,7 @@ import HelloWorld from "./components/HelloWorld.vue";
         <RouterLink to="/inputs">Inputs</RouterLink>
         <RouterLink to="/lists">Lists</RouterLink>
         <RouterLink to="/lifecycle">Lifecycle</RouterLink>
+        <RouterLink to="/emit">Emit</RouterLink>
       </nav>
     </div>
   </header>

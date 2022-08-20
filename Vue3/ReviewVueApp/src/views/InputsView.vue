@@ -8,7 +8,6 @@ const greeting = ref("Hello from parent!");
 
 <template>
   <main>
-    <!-- So even though it can be tempting to pass functions as props in Vue, it's considered an anti-pattern. -->
     <InputsComponent :msg="greeting" staticMessage="I am static!" />
     <ConditionalRendering />
   </main>

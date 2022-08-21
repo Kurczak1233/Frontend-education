@@ -178,3 +178,11 @@ defineProps<{
 16. Sending props as object vs single props
 <BlogPost v-bind="post" /> -> Multiple props in post {post: 'name', count: 5}
 <BlogPost :id="post.id" :title="post.title" /> -> Every prop separately
+
+Static object:
+<BlogPost
+  :author="{
+    name: 'Veronica',
+    company: 'Veridian Dynamics'
+  }"
+ />

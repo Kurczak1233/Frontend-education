@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "lib": ["es6", "dom", "es2017"],
+    "esModuleInterop": true,
+    "target": "es5",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./lib",
+    "skipLibCheck": true,
+    "strict": true
+  },
+  "include": [
+    "./src/**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.svg",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

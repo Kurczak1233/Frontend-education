@@ -7,11 +7,12 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/react": "^18.0.25",
+    "copyfiles": "^2.4.1",
     "tailwindcss": "^3.2.4"
   },
   "scripts": {
     "clean": "rd /s /q lib",
-    "build": "tsc && copy-files",
+    "build": "tsc && npm run copy-files",
     "copy-files": "copyfiles -u 1 src/**/*.html src/**/*.scss src/**/*.svg lib/",
     "test": "mocha",
     "semantic-release": "semantic-release",

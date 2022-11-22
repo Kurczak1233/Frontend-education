@@ -1,6 +1,6 @@
 {
   "name": "bcc-common-components",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Package for sharing common components templates for Vue and React projects",
   "main": "index.js",
   "author": "Michał Kupczak",

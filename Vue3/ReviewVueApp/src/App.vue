@@ -15,7 +15,7 @@ import HelloWorld from "./components/HelloWorld.vue";
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-
+      <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -23,6 +23,7 @@ import HelloWorld from "./components/HelloWorld.vue";
         <RouterLink to="/lists">Lists</RouterLink>
         <RouterLink to="/lifecycle">Lifecycle</RouterLink>
         <RouterLink to="/emit">Emit</RouterLink>
+        <RouterLink to="/poc">PoC</RouterLink>
       </nav>
     </div>
   </header>

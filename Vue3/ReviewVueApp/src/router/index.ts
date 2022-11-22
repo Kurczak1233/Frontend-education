@@ -49,6 +49,14 @@ const router = createRouter({
       // which is lazy-loaded when the route is visited.
       component: () => import("../views/ChildToParentEmitting.vue"),
     },
+    {
+      path: "/poc",
+      name: "poc",
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/PoC.vue"),
+    },
   ],
 });
 

@@ -1,6 +1,6 @@
 {
   "name": "bcc-common-components-poc",
-  "version": "0.0.2",
+  "version": "0.0.11",
   "files": [
     "dist"
   ],
@@ -20,6 +20,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "bcc-common-components-poc": "^0.0.2",
     "flowbite": "^1.5.4",
     "vue": "^3.2.41"
   },

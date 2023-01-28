@@ -30,14 +30,36 @@ const removeTodo = (todo: any) => {
 const filteredTodos = computed(() => {
   return hideCompleted.value ? todos.value.filter((t) => !t.done) : todos.value;
 });
+
+const mockedList = [
+  {
+    id: 1,
+    text: "Todo 1",
+    path: "/about/",
+    children: [
+      { id: 3, text: "Child 1" },
+      { id: 4, text: "Child 2 lists" },
+      {
+        id: 5,
+        text: "Child 3 lists",
+        children: [
+          { id: 6, text: "Nested Child 1" },
+          { id: 7, text: "Nested Child 2" },
+          { id: 8, text: "Nested Child 3 lists" },
+        ],
+      },
+    ],
+  },
+  { id: 2, text: "Todo 2" },
+];
 </script>
 
 <template>
   <main>
-    <ListsComponent v-for="todo in filteredTodos" :key="todo.id">
+    <ListsComponent v-for="todo in mockedList" :key="todo.id" :todo="todo">
       <template #header>{{ todo.id }}</template>
       {{ todo.text }}
-      <button @click="removeTodo(todo)">X</button>
+      <!-- <button @click="removeTodo(todo)">X</button> -->
     </ListsComponent>
     <input v-model="newTodo" />
     <button @click="addTodo">Add item</button>
